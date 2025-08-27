@@ -11,18 +11,28 @@
     "test": "jest"
   },
   "dependencies": {
+    "lint-staged": "16.1.5",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
-  "jest": "^30.0.5",
-  "babel-jest": "^30.0.5",
-  "jest-environment-jsdom": "^30.0.5",
-  "@babel/preset-env": "^7.28.3",
-  "@babel/preset-react": "^7.27.1",
-  "@testing-library/react": "^16.3.0",
-  "@testing-library/jest-dom": "^6.8.0",
-  "@testing-library/dom": "^10.4.1"
-}
-
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "babel-jest": "^30.0.5",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
+    "prettier": "^3.6.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "npx prettier -w"
+    ],
+    "*.{css,md,json}": [
+      "npx prettier -w"
+    ]
+  }
 }
